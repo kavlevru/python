@@ -1,8 +1,7 @@
 def sum(array):
     if array == []:
         return 0
-    x = array.pop()
-    return x + sum(array)
+    return array[0] + sum(array[1:])
 
 def array_count(array):
     if array == []:
@@ -15,4 +14,4 @@ def max(array):
     sub_max = max(array[1:])
     return array[0] if array[0] > sub_max else sub_max
 
-print(max([2, 4, 6, 10, 11, 14]))
+print(sum([2, 4, 6, 10, 11, 14]))
